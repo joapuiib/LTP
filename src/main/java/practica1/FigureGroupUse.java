@@ -5,8 +5,8 @@ public class FigureGroupUse {
         FigureGroup g = new FigureGroup();
         g.add(new Circle(10, 5, 3.5));
         g.add(new Triangle(10, 5, 6.5, 32));
-        g.add(new Rectangle(10, 5, 6.5, 32));
-        g.add(new Square(10, 5, 6.5));
+        g.add(new Rectangle(10, 5, 10, 2));
+        g.add(new Square(10, 5, 7));
         System.out.println(g);
 
         System.out.println("Area total: " + g.area());
@@ -14,5 +14,7 @@ public class FigureGroupUse {
 
         System.out.println("Greatest figure:");
         System.out.println(greatest.toString());
+
+        g.print('a');
     }
 }

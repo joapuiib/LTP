@@ -1,6 +1,6 @@
 package practica1;
 
-public abstract class Figure {
+public abstract class Figure implements Comparable<Figure> {
     private double x, y;
     public Figure(double x, double y) {
         this.x = x; this.y = y;
@@ -16,4 +16,15 @@ public abstract class Figure {
     }
 
     public abstract double area();
+
+    @Override
+    public int compareTo(Figure f) {
+        if (this.area() < f.area()) {
+            return -1;
+        } else if (this.area() > f.area()) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
 }
